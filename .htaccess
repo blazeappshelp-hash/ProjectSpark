@@ -1,0 +1,11 @@
+Options -Indexes
+RewriteEngine On
+
+# Prevent Apache from auto-adding trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# Send all routes to React
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
