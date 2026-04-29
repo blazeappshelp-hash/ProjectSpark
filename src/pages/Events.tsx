@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 // 1. Import the Footer component
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 
 /**
  * Animated Counter Component
